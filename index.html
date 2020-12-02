@@ -1,16 +1,69 @@
 <!DOCTYPE html>
 <head>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Hind&display=swap" rel="stylesheet">
     <style>
+        body{
+            font-family: 'Hind', sans-serif;
+            background-color: darkolivegreen;
+        }
         #welcome-section{
             height: 100vh;
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            justify-content: center;
+            align-content: center;
+            line-height: 0em
+        }
+        #navbar{
+            display: flex;
+            justify-content: flex-end;
+            position: absolute;
+            text-decoration: none;
+            text-align: right;
+        }
+        #navlist{
+            display: flex;
+            list-style: none;
+        }
+        nav a{
+            color: whitesmoke;
+        }
+        nav a:hover{
+            color:
+        }
+        #projects{
+            text-align: center;
+            padding: 10rem;
+            margin: 10rem;
+            background-color: gray;
+        }
+        .project-grid{
+            display: grid;
+            grid-template-columns: repeat(3, minmax(60px, 1fr));
+            grid-template-rows: 1fr 1fr 1fr;
+            grid-column-gap: 2rem;
+        }
+        .projImg{
+            height: calc(100% - 6.8rem);
+            width: 100%;
+            object-fit: cover;
+        }
+        .projTitle{
+            padding: 1rem 3rem;
+            color: whitesmoke;
+            background-color: darkolivegreen;
         }
     </style>
 </head>
 <body>
     <nav id="navbar">
-        <a href="#welcome-section" class="nav-link">About</a>
-        <a href="#projects" class="nav-link">Work</a>
-        <a href="contacts" class="nav-link">Contact</a>
+        <ul id="navlist">
+        <li><a href="#welcome-section" class="nav-link">About</a></li>
+        <li><a href="#projects" class="nav-link">Work</a></li>
+        <li><a href="contacts" class="nav-link">Contact</a></li>
+        </ul>   
     </nav>
     <section id="welcome-section">
         <h1>Timmy Parker</h1>
@@ -19,7 +72,14 @@
     <section id="projects">
         <h2>Some of my work</h2>
         <div class="project-grid">
-            <a href="https://github.com/miz1290/personalportfolio" class="project-tile">portfolio site</a>
+            <a href="https://ibb.co/0DLxMDp"><img class="projImg" src="https://i.ibb.co/mDK3qDr/chrome-2020-12-01-23-42-59.png" alt="Tribute Page" border="0">
+                <p class="projTitle">Tribute Page</p></a>
+            <a href="https://ibb.co/ZV4tX9G"><img class="projImg" src="https://i.ibb.co/mGZ1Tpb/chrome-2020-12-01-23-55-12.png" alt="Survey Form" border="0">
+                <p class="projTitle">Survey Form</p></a>
+            <a href="https://ibb.co/f0vHZrQ"><img class="projImg" src="https://i.ibb.co/5cFLCs2/chrome-2020-12-01-23-56-15.png" alt="Landing Page" border="0">
+                <p class="projTitle">Landing Page</p></a>
+            <a href="https://ibb.co/MhCRW6h"><img class="projImg" src="https://i.ibb.co/H2Hr1d2/chrome-2020-12-01-23-55-32.png" alt="Tech Doc" border="0">
+                <p class="projTitle">Tech Doc</p></a>
         </div>
     </section>
     <section id="contacts">
